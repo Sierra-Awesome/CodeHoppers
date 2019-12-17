@@ -22,9 +22,9 @@ icon3 = pygame.image.load('icon3.jpg').convert()
 # 3 - Define game functions ####################################################
 ## 3a - Initialize the game board
 def initBoard(): 
-  for row in range(5):
+  for row in range(7):
     grid.append([])
-    for column in range(5):
+    for column in range(7):
         grid[row].append(0) # all values set to 0
   # Set hard-coded start locations for player and icons:        
   grid[0][0] = 1  # player icon; value of 1 is player location
@@ -39,8 +39,8 @@ def drawIcon(rw,cl,iconName):
   
 ## 3c - Update the grid for the board
 def updateBoard():
-  for row in range(5):
-    for column in range(5):
+  for row in range(7):
+    for column in range(7):
       color = WHITE             
       pygame.draw.rect(screen,color,[(margin + width) * column + margin,
                                      (margin + height) * row + margin,
